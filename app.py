@@ -7,3 +7,12 @@ csrf = CSRFProtect(app)
 @app.route("/")
 def pagina_inicial():
     return "My First App - Lab DevOps CC"
+
+@app.route('/bug')                                                                                                                                
+def bad():                                                                                                                                        
+    try:                                                                                                                                          
+        raise TypeError()                                                                                                                         
+    except TypeError as e:                                                                                                                        
+        print(e)                                                                                                                                  
+    except TypeError as e:                                                                                                                        
+        print("Duplicado, ou seja, nunca vai entrar aqui.")
